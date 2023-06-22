@@ -1,0 +1,167 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <string>
+
+using namespace std;
+int randomGenerator();
+
+/*int main()
+{
+    char answer;
+    randomGenerator();
+    cout << "Would you like a new outfit? y / n \n";
+    cin >> answer;
+    if (answer == 'y')
+        randomGenerator();
+    else
+        cout << "Okay! Enjoy your outfit!";
+    return 0;
+   
+}*/
+int randomGenerator()
+{
+    char weather;
+    char a = 'a';
+    char b = 'b';
+    char c = 'c';
+
+    int outfit;
+    srand(time(0));
+    int shirtWarm = rand() % (5 - 1 + 1) + 1;
+    int bottomsWarm = rand() % (5 - 1 + 1) + 1;
+    int jacketWarm = rand() % (5 - 1 + 1) + 1;
+   
+    int shirtCold = rand() % (5 - 1 + 1) + 1;
+    int bottomsCold = rand() % (5 - 1 + 1) + 1;
+    int jacketCold = rand() % (5 - 1 + 1) + 1;
+
+    int shirtRain = rand() % (5 - 1 + 1) + 1;
+    int bottomsRain = rand() % (5 - 1 + 1) + 1;
+    int jacketRain = rand() % (5 - 1 + 1) + 1;
+
+    cout << "Hi! How's the weather today? Enter a Letter." << endl;
+    cout << "a. Warm\nb. Chilly/Windy\nc. Raining" << endl;
+    cin >> weather;
+
+    if (weather == 'a')
+    {
+        cout << "Here's an outfit for you!\n" <<endl;
+        if (shirtWarm == 1)
+            cout << "Bucee's TShirt\n" << endl;
+        else if (shirtWarm == 2)
+            cout << "SZA TShirt\n" << endl;
+        else if (shirtWarm == 3)
+            cout << "Pink Strawberry Tee\n" << endl;
+        else if (shirtWarm == 4)
+            cout << "Bob Marley Tee\n" << endl;
+        else if (shirtWarm == 5)
+            cout << "Pink Button up\n" << endl;
+
+        if (bottomsWarm == 1)
+            cout << "H&M Jeans\n" << endl;
+        else if (bottomsWarm == 2)
+            cout << "Zara Jeans\n" << endl;
+        else if (bottomsWarm == 3)
+            cout << "Dark Wash Flares\n" << endl;
+        else if (bottomsWarm == 4)
+            cout << "Lululemon flare leggings\n" << endl;
+        else if (bottomsWarm == 5)
+            cout << "Gray Sweatpants\n" << endl;
+
+        if (jacketWarm == 1)
+            cout << "Black Zip Up\n" << endl;
+        else if (jacketWarm == 2)
+            cout << "Brown Zip Up\n" << endl;
+        else if (jacketWarm == 3)
+            cout << "Pink Cardigan\n" << endl;
+        else if (jacketWarm == 4)
+            cout << "No Jacket\n" << endl;
+        else if (jacketWarm == 5)
+            cout << "No Jacket\n" << endl;
+        
+    }
+    else if (weather == 'b')
+    {
+        cout << "Here's an outfit for you!\n" << endl;
+
+        if (shirtCold == 1)
+            cout << "Gray Button up\n" << endl;
+        else if (shirtCold == 2)
+            cout << "Pink button up\n" << endl;
+        else if (shirtCold == 3)
+            cout << "Black Long Sleeve\n" << endl;
+        else if (shirtCold == 4)
+            cout << "White Long Sleeve\n" << endl;
+        else if (shirtCold == 5)
+            cout << "Brandy Long Sleeve\n";
+            if (bottomsCold == 1)
+                cout << "H&M Jeans\n" << endl;
+            else if (bottomsCold == 2)
+                cout << "Zara Jeans\n" << endl;
+            else if (bottomsCold == 3)
+                cout << "Dark Wash Flares\n" << endl;
+            else if (bottomsCold == 4)
+                cout << "NorthFace Black Sweatpants\n" << endl;
+            else if (bottomsCold == 5)
+                cout << "Cargo Jeans\n" << endl;
+            
+            if (jacketCold == 1)
+                cout << "Cowboys Hoodie\n" << endl;
+            else if (jacketCold == 2)
+                cout << "Brandy Zip Up\n" << endl;
+            else if (jacketCold == 3)
+                cout << "Brown NorthFace Jacket\n" << endl;
+            else if (jacketCold == 4)
+                cout << "Brandy Sweatshirt\n" << endl;
+            else if (jacketCold == 5)
+                cout << "Green Hoodie\n" << endl;
+    }
+    else if (weather == 'c')
+    {
+        cout << "Here's an outfit for you!\n" << endl;
+
+        if (shirtRain == 1)
+            cout << "Gray Twlight-Core Button up\n" << endl;
+        else if (shirtRain == 2)
+            cout << "Pink button up\n" << endl;
+        else if (shirtRain == 3)
+            cout << "Black Long Sleeve\n" << endl;
+        else if (shirtRain == 4)
+            cout << "White Long Sleeve\n" << endl;
+        else if (shirtRain == 5)
+            cout << "Brandy Long Sleeve\n";
+
+        if (bottomsRain == 1)
+            cout << "H&M Jeans\n" << endl;
+        else if (bottomsRain == 2)
+            cout << "Zara Jeans\n" << endl;
+        else if (bottomsRain == 3)
+            cout << "Dark Wash Flares\n" << endl;
+        else if (bottomsRain == 4)
+            cout << "Cargo Jeans\n" << endl;
+        else if (bottomsRain == 5)
+            cout << "Zara Jeans\n" << endl;
+        
+        if (jacketRain == 1)
+            cout << "Black Zip Up\n" << endl;
+        else if (jacketRain == 2)
+            cout << "Brandy Zip Up\n" << endl;
+        else if (jacketRain == 3)
+            cout << "Green Hoodie\n" << endl;
+        else if (jacketRain == 4)
+            cout << "Umbrella\n" << endl;
+        else if (jacketRain == 5)
+            cout << "Brandy Zip Up\n" << endl;
+    }
+    else
+        cout << "Please enter a lowercase a (warm), b (cold), or c (raining)";
+    char answer;
+        cout << "Would you like a new outfit? y / n \n";
+        cin >> answer;
+        if (answer == 'y')
+            randomGenerator();
+        else
+            cout << "Okay! Enjoy your outfit!";
+    return 0;
+}
